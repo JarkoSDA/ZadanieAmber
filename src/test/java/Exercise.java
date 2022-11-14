@@ -46,7 +46,9 @@ public class Exercise {
 
         driver.findElement(By.name("end")).click();
 
-        boolean wait = new WebDriverWait(driver, Duration.ofSeconds(2)).until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.className("wrap")),"OK. Good answer"));
+       // boolean wait = new WebDriverWait(driver, Duration.ofSeconds(2)).until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.className("wrap")),"OK. Good answer"));
+
+        Thread.sleep(2000);
 
         Assert.assertEquals("OK. Good answer", driver.findElement(By.className("wrap")).getText());
 
